@@ -1,11 +1,11 @@
 [![Stories in Ready](https://badge.waffle.io/w-schwier/makersbnb.png?label=ready&title=Ready)](http://waffle.io/w-schwier/makersbnb)
 
 
-###MakersBnB specification
+### MakersBnB specification
 
 We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
 
-##Headline specifications
+## Headline specifications
 
 Any signed-up user can list a new space.
 Users can list multiple spaces.
@@ -15,7 +15,7 @@ Any signed-up user can request to hire any space for one night, and this should 
 Nights for which a space has already been booked should not be available for users to book that space.
 Until a user has confirmed a booking request, that space can still be booked for that night.
 
-##Nice-to-haves
+## Nice-to-haves
 
 Users should receive an email whenever one of the following happens:
 They sign up
@@ -36,7 +36,7 @@ Mockups
 
 Mockups for MakersBnB are available here.
 
-##User Stories:
+## User Stories:
 
 1.  As a user,
     so that I can use Air B'n'B,
