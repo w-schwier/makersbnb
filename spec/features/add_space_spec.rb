@@ -1,5 +1,9 @@
 feature "adding spaces" do
 
+  before do
+    sign_up
+  end
+
   scenario "user can list space" do
     visit('/spaces/new')
     fill_in :space_name, with: "JJ's sexy pad"
