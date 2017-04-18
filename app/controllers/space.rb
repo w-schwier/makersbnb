@@ -11,7 +11,7 @@ class FourM < Sinatra::Base
   end
 
   post('/spaces') do
-    Space.create(space_name: params[:space_name])
+    Space.create(space_name: params[:space_name], description: params[:description], price: params[:price])
     redirect('/spaces')
   end
 end

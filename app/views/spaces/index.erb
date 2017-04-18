@@ -1,6 +1,10 @@
 <h3>Welcome <%=current_user.name%>
 <ul id='listed_spaces'>
   <% @spaces.each do |space| %>
-    <%= space.space_name %>
+    <li> Name: <%= space.space_name %>
+    <br></br>
+    Description: <%= space.description %><br></br>
+    Price: <%= space.price %></li>
+    <br></br>
   <% end %>
 </ul>
