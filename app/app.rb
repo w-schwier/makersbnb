@@ -6,3 +6,5 @@ require 'sinatra/flash'
 require_relative 'data_mapper_setup'
 
 require_relative 'server'
+require_relative './models/space'
+require_relative 'controllers/space'

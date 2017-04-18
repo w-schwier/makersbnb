@@ -30,11 +30,11 @@ Capybara.app = FourM
 RSpec.configure do |config|
 
   config.before(:each) do
-    DataMapper.setup(:default, "postgres://localhost/bookmark_manager_test")
+    DataMapper.setup(:default, "postgres://localhost/four_m_test")
   end
 
   config.after(:each) do
-    DataMapper.setup(:default, "postgres://localhost/bookmark_manager_development")
+    DataMapper.setup(:default, "postgres://localhost/four_m_development")
   end
 
   config.before(:suite) do
