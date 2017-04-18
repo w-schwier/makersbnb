@@ -1,6 +1,7 @@
 class FourM < Sinatra::Base
 
   get('/spaces') do
+    @users = User.first
     @spaces = Space.all
     erb :'spaces/index'
   end

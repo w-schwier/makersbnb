@@ -11,9 +11,13 @@ class FourM < Sinatra::Base
                         surname: params[:surname],
                         password: params[:password],
                         password_confirmation: params[:password_confirmation])
-  redirect to('/spaces')
+    if @user.save
+      session[:user_id] = @user.id
+      redirect to('/spaces')
+    else
+      erb :'users/new'
+    end
   end
-
 
 
 

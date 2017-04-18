@@ -1,6 +1,6 @@
 module SessionHelpers
 
-  def sign_up(email: 'me@mecom', password: '12345678', password_confirmation: '12345678')
+  def sign_up(email: 'me@me.com', password: '12345678', password_confirmation: '12345678')
     visit('/users/new')
     fill_in(:email, with: email)
     fill_in(:password, with: password)
