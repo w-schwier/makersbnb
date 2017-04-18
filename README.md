@@ -33,3 +33,6 @@ Mockups
 Mockups for MakersBnB are available here.
 
 User Stories:
+
+
+[![Stories in Ready](https://badge.waffle.io/w-schwier/makersbnb.png?label=ready&title=Ready)](http://waffle.io/w-schwier/makersbnb)
