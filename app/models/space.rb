@@ -1,6 +1,8 @@
 class Space
   include DataMapper::Resource
 
+  belongs_to :user
+
   property :id, Serial
   # dspace :user, String
   property :space_name, String, :required => true

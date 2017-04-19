@@ -38,4 +38,13 @@ feature "adding spaces" do
     expect(page).to have_content('Please sign in first in order to add a new place to FourM.')
   end
 
+  scenario "New space is connected to the user who posted it" do
+    user = User.first
+    expect(user.spaces.map(&:space_name)).to include("JJ's sexy pad")
+  end
+
+  scenario "Host's name should be next to the space" do
+    expect(page).to have_content('Super Mario')
+  end
+
 end
