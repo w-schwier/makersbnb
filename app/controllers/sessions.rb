@@ -16,4 +16,10 @@ class FourM < Sinatra::Base
     end
   end
 
+  delete '/session' do
+    session[:user_id] = nil
+    flash.keep[:notice] = 'You succesfully signed out.'
+    redirect to('/session/new')
+  end
+
 end
