@@ -7,4 +7,10 @@
     Price: <%= space.price %></li>
     <br></br>
   <% end %>
+
 </ul>
+<form action='/session' method='post'>
+  <input type='hidden' name='_method' value='delete'>
+  <input type='submit' value='Sign Out'>
+
+</form>
