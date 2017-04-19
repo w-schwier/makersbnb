@@ -5,6 +5,7 @@ require './app/app'
 require './app/models/user'
 require 'database_cleaner'
 require_relative 'helpers/session'
+require_relative 'features/web_helper'
 
 #require 'features/web_helpers'
 #require 'helpers/session'
