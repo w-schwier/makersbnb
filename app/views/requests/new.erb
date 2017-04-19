@@ -1,1 +1,5 @@
 <%= @space.space_name %>
+<form action='/requests' method='post'>
+  <input type='date' name='requested_date' required>
+  <input type='submit' value='Request'>
+</form>

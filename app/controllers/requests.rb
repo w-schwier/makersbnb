@@ -10,5 +10,14 @@ class FourM < Sinatra::Base
     erb :'requests/new'
   end
 
+  post '/requests' do
+    $test = params[:requested_date]
+    redirect "/requests"
+  end
+
+  get '/requests' do
+    @test = $test
+    erb :'requests/index'
+  end
 
 end
