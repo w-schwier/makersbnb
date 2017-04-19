@@ -10,5 +10,10 @@ module SessionHelpers
     click_button('Sign Up')
   end
 
-
+  def sign_in(email: email, password: password)
+    visit('/session/new')
+    fill_in(:email, with: email)
+    fill_in(:password, with: password)
+    click_button('Sign In')
+  end
 end
