@@ -11,6 +11,7 @@ gem 'bcrypt'
 gem 'dm-postgres-adapter'
 gem 'rack'
 gem 'rake'
+gem 'sinatra-partial'
 
 group :test do
   gem 'rspec'
