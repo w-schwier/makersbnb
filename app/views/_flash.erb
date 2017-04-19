@@ -1,8 +1,14 @@
-<% if flash[:errors] %>
+ <% if flash[:errors] %>
   The following errors have occured:
   <ul id="errors" style='color: red'>
     <% flash[:errors].each do |error|%>
       <li> <%= error %></li>
     <% end %>
   </ul>
+<% end %>
+
+<% if flash[:notice] %>
+  <div id='notice'>
+    <%= flash[:notice] %>
+  </div>
 <% end %>
