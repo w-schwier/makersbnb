@@ -5,6 +5,11 @@ feature "adding spaces" do
     list_space
   end
 
+  scenario "user can access new space form from home page" do
+    click_button('Add New Space')
+    expect(current_path).to eq('/spaces/new')
+  end
+
   scenario "user can list space" do
     visit('/spaces/new')
     fill_in :space_name, with: "JJ's sexy pad"
