@@ -16,4 +16,6 @@ module SessionHelpers
     fill_in(:password, with: password)
     click_button('Sign In')
   end
+
+  
 end
