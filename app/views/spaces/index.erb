@@ -7,6 +7,10 @@
     </br>
     Available dates: <%=space.start_date %> - <%=space.end_date%>
     </br>
+    <form action="/set_space" method="post">
+      <input type='hidden' name='space' value="<%=space.id%>">
+      <input type="submit" value="Request Space">
+    </form>
   </br>
  <% end %>
 </ul>
