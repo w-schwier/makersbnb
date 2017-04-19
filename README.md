@@ -81,3 +81,11 @@ Mockups for MakersBnB are available here.
 11. As a user,
     to increase my chances of renting out my property,
     guests can still book dates for spaces that are pending confirmation.
+
+12. As a user,
+    So that I can access my personal account,
+    I want to be able to sign in.
+
+13. As a user,
+    So that I can stop using my account,
+    I want to be able to sign out.
