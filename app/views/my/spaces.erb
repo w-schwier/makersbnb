@@ -1,18 +1,17 @@
-<ul id='listed_spaces'>
-  <% @my_spaces.each do |space| %>
-    <li> Name: <%= space.space_name %>
+<% if current_user %>
+  <h3> Your Spaces:</h3>
+  <ul id='listed_spaces'>
+    <% @my_spaces.each do |space| %>
+      <li> Name: <%= space.space_name %>
+      </br>
+      Description: <%= space.description %></br>
+      Price per night: £<%= '%.2f' % space.price %></li>
+      </br>
+      Space available between: <%= space.start_date %> and <%=space.end_date%>
+      </br>
     </br>
-    Description: <%= space.description %></br>
-    Price per night: £<%= '%.2f' % space.price %></li>
-    </br>
-    Space available between: <%= space.start_date %> - <%=space.end_date%>
-    </br>
-    <% if current_user %>
-      <form action="/set_space" method="post">
-        <input type='hidden' name='space' value="<%=space.id%>">
-        <input type="submit" value="Request Space">
-      </form>
     <% end %>
-  </br>
-  <% end %>
-</ul>
+  </ul>
+<% else %>
+  <h3> Please sign in to view your spaces </h3>
+<% end %>
