@@ -9,7 +9,7 @@
       Price per night:
       £ <input type='number' name="price" step='0.01' placeholder='00.00' />
       Available from
-      <input type="date" name="start_date" required>
+      <input type="date" name="start_date" min='<%= DateTime.now.to_date %>' required>
       to
       <input type="date" name="end_date" required>
 
