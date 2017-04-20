@@ -3,11 +3,12 @@ require 'bcrypt'
 class User
 
   include DataMapper::Resource
+  has n, :requests
+  has n, :spaces
 
   attr_reader :password
   attr_accessor :password_confirmation
 
-  has n, :spaces
 
   property :id, Serial
   property :name, String
