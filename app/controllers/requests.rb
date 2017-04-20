@@ -1,8 +1,8 @@
 class FourM < Sinatra::Base
 
   post '/set_space' do
-    space = params[:space]
-    redirect "/requests/#{space.to_sym}"
+    space_id = params[:space]
+    redirect "/requests/#{space_id.to_sym}"
   end
 
   get '/requests/:id' do
