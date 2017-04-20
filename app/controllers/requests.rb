@@ -14,7 +14,7 @@ class FourM < Sinatra::Base
     Request.create(requested_date: params[:requested_date],
                    space_id: params[:space_id],
                    user_id: current_user.id)
-    redirect "/requests"
+    redirect to( "/requests")
   end
 
   get '/requests' do

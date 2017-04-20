@@ -19,4 +19,8 @@ class FourM < Sinatra::Base
     redirect('/spaces')
   end
 
+  get('/my/spaces') do
+    @my_spaces = Space.all(id: current_user.id)
+    erb :'my/spaces'
+  end
 end
