@@ -7,14 +7,14 @@ module SessionHelpers
     fill_in(:password_confirmation, with: password_confirmation)
     fill_in(:name, with: 'Mario')
     fill_in(:surname, with: 'Super')
-    click_button('Sign Up')
+    click_button('sign-up-btn')
   end
 
   def sign_in(email: email, password: password)
     visit('/session/new')
     fill_in(:email, with: email)
     fill_in(:password, with: password)
-    click_button('Sign In')
+    click_button('sign-in-btn')
   end
 
 

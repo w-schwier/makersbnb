@@ -1,0 +1,7 @@
+.navbar-form .form-control {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-left: 100px;
+  width: 300px;
+}

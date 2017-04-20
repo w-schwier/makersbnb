@@ -1,11 +1,6 @@
 <% if current_user %>
   <h3>Welcome <%= current_user.name%></h3>
 
-  <form action='/session' method='post'>
-    <input type='hidden' name='_method' value='delete'>
-    <input type='submit' value='Sign Out'>
-  </form>
-
   <form action='/spaces/new' method='get'>
     <input type='submit' value='Add New Space'>
   </form>

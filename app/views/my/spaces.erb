@@ -1,8 +1,6 @@
 <ul id='listed_spaces'>
-  <% @spaces.each do |space| %>
+  <% @my_spaces.each do |space| %>
     <li> Name: <%= space.space_name %>
-    </br>
-    Host: <%= space.user.name + " " +  space.user.surname %>
     </br>
     Description: <%= space.description %></br>
     Price per night: £<%= '%.2f' % space.price %></li>
