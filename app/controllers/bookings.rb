@@ -4,8 +4,10 @@ class FourM < Sinatra::Base
     # request = params[:booking]
     request = Request.first(id: params[:booking])
     @booking = request.confirm_booking
-    request.destroy
+    all_request = Request.all(requested_date: request.requested_date)
     #  require 'pry'; binding.pry
+    request.destroy
+    all_request.destroy
     # if condition
     #
     # end

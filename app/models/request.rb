@@ -10,7 +10,8 @@ class Request
 
   def confirm_booking
     Booking.create(date: self.requested_date,
-                   user: self.user)
+                   user: self.user,
+                   space_id: self.space.id)
   end
 
 end
