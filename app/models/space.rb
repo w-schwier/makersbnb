@@ -11,4 +11,5 @@ class Space
   property :start_date, Date, :required => true
   property :end_date, Date, :required => true
 
+
 end

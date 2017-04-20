@@ -18,4 +18,5 @@ class FourM < Sinatra::Base
                  user_id: current_user.id)
     redirect('/spaces')
   end
+
 end
