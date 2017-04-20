@@ -7,3 +7,9 @@ def list_space
   fill_in :end_date, with: "30/05/2001"
   click_button "list space"
 end
+
+def make_requests
+  click_button 'Request Space'
+  fill_in :requested_date, with: '25/05/2017'
+  click_button 'Request'
+end

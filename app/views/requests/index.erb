@@ -8,6 +8,10 @@
     </br>
     Requested date: <%= request.requested_date %>
     </br>
+    <form action="/bookings" method="post">
+      <input type='hidden' name='booking' value="<%=request.id%>">
+      <input type="submit" value="Confirm">
+    </form>
   </br>
  <% end %>
 </ul>

@@ -1,0 +1,10 @@
+<h1> Confirmed booking</h1>
+
+<h3> <%=current_user.name%>'s confirmed booking</h3>
+<% @bookings.each do |booking| %>
+  <li> Host: <%= booking.request.space.user.name %>
+   Price per night: <%= booking.request.space.price %></li>
+   </br>
+   Requested date: <%= booking.request.requested_date %>
+   </br>
+<% end %>

@@ -2,10 +2,10 @@ class FourM < Sinatra::Base
 
   post '/set_space' do
     space_id = params[:space]
-    redirect "/requests/#{space_id.to_sym}"
+    redirect "/requests/new/#{space_id.to_sym}"
   end
 
-  get '/requests/:id' do
+  get '/requests/new/:id' do
     @space = Space.first(id: params[:id])
     erb :'requests/new'
   end
