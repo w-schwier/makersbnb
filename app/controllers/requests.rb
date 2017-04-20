@@ -11,12 +11,14 @@ class FourM < Sinatra::Base
   end
 
   post '/requests' do
-    $test = params[:requested_date]
+    Request.create(requested_date: params[:requested_date],
+                   space_id: params[:space_id],
+                   user_id: current_user.id)
     redirect "/requests"
   end
 
   get '/requests' do
-    @test = $test
+    @requests = Request.all(user_id: current_user.id)
     erb :'requests/index'
   end
 
