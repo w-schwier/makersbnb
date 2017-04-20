@@ -12,6 +12,7 @@ require_relative 'controllers/users'
 require_relative 'controllers/space'
 require_relative 'controllers/sessions'
 require_relative 'controllers/requests'
+require_relative 'controllers/bookings'
 
 require_relative './models/user'
 require_relative './models/space'

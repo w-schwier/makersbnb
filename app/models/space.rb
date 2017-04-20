@@ -3,6 +3,7 @@ class Space
 
   belongs_to :user
   has n, :requests
+  has n, :bookings
 
   property :id, Serial
   property :space_name, Text, :required => true

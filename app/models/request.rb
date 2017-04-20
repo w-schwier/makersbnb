@@ -7,4 +7,11 @@ class Request
   property :id, Serial
   property :requested_date, Date
 
+
+  def confirm_booking
+    Booking.create(date: self.requested_date,
+                   user: self.user,
+                   space_id: self.space.id)
+  end
+
 end
