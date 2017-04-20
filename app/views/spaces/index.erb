@@ -1,12 +1,18 @@
 <ul id='listed_spaces'>
   <% @spaces.each do |space| %>
    <li> Name: <%= space.space_name %>
-    <li>Host: <%= space.user.surname + " " + space.user.name %>
+   </br>
+    Host: <%= space.user.name + " " +  space.user.surname %>
     </br>
     Description: <%= space.description %></br>
     Price per night: <%= space.price %></li>
     </br>
-    Available dates: <%=space.start_date %> - <%=space.end_date%>
+    Space available between: <%=space.start_date %> - <%=space.end_date%>
     </br>
+    <form action="/set_space" method="post">
+      <input type='hidden' name='space' value="<%=space.id%>">
+      <input type="submit" value="Request Space">
+    </form>
+  </br>
  <% end %>
 </ul>
