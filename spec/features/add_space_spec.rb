@@ -31,6 +31,11 @@ feature "adding spaces" do
     expect(page).to have_content("2001-05-30")
   end
 
+  scenario "host name displayed with each space" do
+    expect(page).to have_content('Host: Super Mario')
+  end
+
+
   scenario "Only signed in users can add a new space" do
     click_button('Sign Out')
     visit '/spaces/new'
