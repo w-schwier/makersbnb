@@ -17,5 +17,5 @@ module SessionHelpers
     click_button('Sign In')
   end
 
-  
+
 end

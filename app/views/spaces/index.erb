@@ -5,9 +5,9 @@
     Host: <%= space.user.name + " " +  space.user.surname %>
     </br>
     Description: <%= space.description %></br>
-    Price per night: <%= space.price %></li>
+    Price per night: £<%= '%.2f' % space.price %></li>
     </br>
-    Space available between: <%=space.start_date %> - <%=space.end_date%>
+    Space available between: <%= space.start_date %> - <%=space.end_date%>
     </br>
     <form action="/set_space" method="post">
       <input type='hidden' name='space' value="<%=space.id%>">

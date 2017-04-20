@@ -32,9 +32,8 @@ feature "adding spaces" do
   end
 
   scenario "host name displayed with each space" do
-    expect(page).to have_content('Host: Super Mario')
+    expect(page).to have_content('Host: Mario Super')
   end
-
 
   scenario "Only signed in users can add a new space" do
     click_button('Sign Out')
