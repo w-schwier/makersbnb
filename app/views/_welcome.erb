@@ -1,15 +1,4 @@
 <% if current_user %>
   <h3>Welcome <%= current_user.name%></h3>
 
-  <form action='/spaces/new' method='get'>
-    <input type='submit' value='Add New Space'>
-  </form>
-
-  <form action='/spaces'>
-    <input type='submit' value='View Spaces'>
-  </form>
-  <form action='/requests'>
-    <input type='submit' value='View Requests'>
-  </form>
-
 <% end %>

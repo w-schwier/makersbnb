@@ -7,13 +7,15 @@
     Description: <%= space.description %></br>
     Price per night: £<%= '%.2f' % space.price %></li>
     </br>
-    Space available between: <%= space.start_date %> - <%=space.end_date%>
+    Space available between: <%= space.start_date %> and <%=space.end_date%>
     </br>
     <% if current_user %>
-      <form action="/set_space" method="post">
-        <input type='hidden' name='space' value="<%=space.id%>">
-        <input type="submit" value="Request Space">
-      </form>
+      <% unless space.id == current_user.id %>
+        <form action="/set_space" method="post">
+          <input type='hidden' name='space' value="<%=space.id%>">
+          <input type="submit" value="Request Space">
+        </form>
+      <% end %>
     <% end %>
   </br>
   <% end %>
