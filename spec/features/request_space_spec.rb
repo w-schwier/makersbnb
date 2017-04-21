@@ -3,6 +3,8 @@ feature 'request a space' do
   before do
     sign_up
     list_space
+    click_button('Sign Out')
+    sign_up(email: 'dog@dog.come')
   end
 
   scenario 'user can select a date' do

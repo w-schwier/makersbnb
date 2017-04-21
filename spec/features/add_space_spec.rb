@@ -6,7 +6,7 @@ feature "adding spaces" do
   end
 
   scenario "user can access new space form from home page" do
-    click_button('Add New Space')
+    page.find(:xpath, "//a[@href='/spaces/new']").click
     expect(current_path).to eq('/spaces/new')
   end
 

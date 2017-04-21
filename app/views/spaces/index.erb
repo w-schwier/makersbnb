@@ -10,7 +10,7 @@
     Space available between: <%= space.start_date %> and <%=space.end_date%>
     </br>
     <% if current_user %>
-      <% unless space.id == current_user.id %>
+      <% unless space.user.id == current_user.id %>
         <form action="/set_space" method="post">
           <input type='hidden' name='space' value="<%=space.id%>">
           <input type="submit" value="Request Space">
