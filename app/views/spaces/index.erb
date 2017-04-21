@@ -9,6 +9,9 @@
     </br>
     Space available between: <%= space.start_date %> and <%=space.end_date%>
     </br>
+    <div id='image_space'>
+      <img src="<%=space.image_url%>">
+    </div>
     <% if current_user %>
       <% unless space.user.id == current_user.id %>
         <form action="/set_space" method="post">

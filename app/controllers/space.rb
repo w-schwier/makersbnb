@@ -9,13 +9,15 @@ class FourM < Sinatra::Base
     erb :'spaces/new'
   end
 
+
   post('/spaces') do
     Space.create(space_name: params[:space_name],
                  description: params[:description],
                  price: params[:price],
                  start_date: params[:start_date],
                  end_date: params[:end_date],
-                 user_id: current_user.id)
+                 user_id: current_user.id,
+                image_url: params[:image])
     redirect('/spaces')
   end
 
