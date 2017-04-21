@@ -1,0 +1,6 @@
+<%= @space.space_name %>
+<form action='/requests' method='post'>
+  <input type='date' name='requested_date' min='<%= @space.start_date %>' max='<%= @space.end_date %>' required>
+  <input type="hidden" name="space_id" value="<%= @space.id %>">
+  <input type='submit' value='Request'>
+</form>
