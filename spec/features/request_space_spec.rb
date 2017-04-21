@@ -32,15 +32,15 @@ feature 'request a space' do
     click_button('Request Space')
     fill_in :requested_date, with: "25/05/2001"
     click_button('Request')
-    # click_button('Sign Out')
-    # sign_in
-    # visit '/requests'
+    click_button('Sign Out')
+    sign_in
+    visit 'host/requests'
     click_button "Confirm"
     click_button "Sign Out"
     sign_in(email: 'dog@dog.come')
-    visit '/spaces'
     click_button('Request Space')
     fill_in :requested_date, with: "25/05/2001"
+    click_button('Request')
     expect(page).to have_content("Date is already booked. Please select another date")
   end
 end
