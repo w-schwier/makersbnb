@@ -11,10 +11,16 @@ class FourM < Sinatra::Base
   end
 
   post '/requests' do
-    Request.create(requested_date: params[:requested_date],
-                   space_id: params[:space_id],
-                   user_id: current_user.id)
-    redirect to( "/requests")
+    if Booking.first(date: params[:requested_date])
+      flash.keep[:errors] = ['Date is already booked. Please select another date']
+       booking = Booking.first(date: params[:requested_date])
+       redirect "/requests/new/#{booking.space.id}"
+    else
+      Request.create(requested_date: params[:requested_date],
+                    space_id: params[:space_id],
+                    user_id: current_user.id)
+      redirect to( "/requests")
+    end
   end
 
   get '/requests' do
