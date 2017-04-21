@@ -6,7 +6,6 @@ class FourM < Sinatra::Base
 
   post '/session' do
     user = User.authenticate(params[:email], params[:password])
-    # require 'pry'; binding.pry
     if user
       session[:user_id] = user.id
       redirect to('/spaces')
