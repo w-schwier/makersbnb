@@ -1,11 +1,13 @@
 <h1>List a space</h1>
-
+<br>
+<div class=>
   <% if current_user %>
     <form action="/spaces" method='post'>
-      Name:
-      <input type="text" name="space_name" required>
-      Description:
-      <input type="text" name="description" required>
+
+      Name: <input type="text" name="space_name" required>
+      <br>
+      Description:<input type="text" name="description" required>
+      <br>
       Price per night:
       £ <input type='number' name="price" step='0.01' placeholder='00.00' />
       Available from

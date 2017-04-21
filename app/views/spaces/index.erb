@@ -1,22 +1,28 @@
-<ul id='listed_spaces'>
-  <% @spaces.each do |space| %>
-    <li> Name: <%= space.space_name %>
-    </br>
-    Host: <%= space.user.name + " " +  space.user.surname %>
-    </br>
-    Description: <%= space.description %></br>
-    Price per night: £<%= '%.2f' % space.price %></li>
-    </br>
-    Space available between: <%= space.start_date %> and <%=space.end_date%>
-    </br>
-    <% if current_user %>
-      <% unless space.user.id == current_user.id %>
-        <form action="/set_space" method="post">
-          <input type='hidden' name='space' value="<%=space.id%>">
-          <input type="submit" value="Request Space">
-        </form>
-      <% end %>
-    <% end %>
+<ul class='listed_spaces' id='listed_spaces'>
+  <h1>Spaces Sphere</h1>
+  <h3> <%=current_user.name%>, where will you escape to?</h3>
   </br>
-  <% end %>
+  <div class=listed_spaces>
+    <% @spaces.each do |space| %>
+      <li> Name: <%= space.space_name %>
+        </br>
+        Host: <%= space.user.name + " " +  space.user.surname %>
+        </br>
+        Description: <%= space.description %></br>
+        Price per night: £<%= '%.2f' % space.price %>
+        </br>
+        Space available between: <%= space.start_date %> and <%=space.end_date%>
+        </br>
+      </li>
+      <% if current_user %>
+        <% unless space.user.id == current_user.id %>
+          <form action="/set_space" method="post">
+            <input type='hidden' name='space' value="<%=space.id%>">
+            <input type="submit" value="Request Space">
+          </form>
+        <% end %>
+      <% end %>
+    </br>
+    <% end %>
+  </div>
 </ul>
