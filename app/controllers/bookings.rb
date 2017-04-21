@@ -6,13 +6,17 @@ class FourM < Sinatra::Base
     all_request = Request.all(requested_date: request.requested_date)
     request.destroy
     all_request.destroy
-    redirect('/requests/confirmations')
+    redirect('/host/requests/bookings')
   end
 
-  get '/requests/confirmations' do
+  get '/host/requests/bookings' do
+    @bookings = Booking.all
+    erb :'host/requests/bookings'
+  end
+
+  get '/guest/requests/bookings' do
     @bookings = Booking.all(user_id: current_user.id)
-    erb :'requests/confirmations'
+    erb :'guest/requests/bookings'
   end
-
 
 end

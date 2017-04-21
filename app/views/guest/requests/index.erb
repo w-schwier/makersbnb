@@ -1,0 +1,13 @@
+<ul id='requests_made'>
+  <h3> <%= current_user.name %>'s requests: </h3>
+  <% @requests.each do |request| %>
+     <li> Host: <%= request.space.user.name + " " + request.space.user.surname%>
+      </br>
+      Description: <%= request.space.description %></br>
+      Price per night: £<%= '%.2f' % request.space.price %></li>
+      </br>
+      Requested date: <%= request.requested_date %>
+      </br>
+      </br>
+  <% end %>
+</ul>
