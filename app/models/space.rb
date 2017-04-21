@@ -11,6 +11,7 @@ class Space
   property :price, Float, :required => true
   property :start_date, Date, :required => true
   property :end_date, Date, :required => true
+  property :image_url, Text, :length => 500
 
 
 end

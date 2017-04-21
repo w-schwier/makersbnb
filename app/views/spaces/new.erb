@@ -4,17 +4,17 @@
   <% if current_user %>
     <form action="/spaces" method='post'>
 
-      Name: <input type="text" name="space_name" required>
-      <br>
-      Description:<input type="text" name="description" required>
-      <br>
-      Price per night:
-      £ <input type='number' name="price" step='0.01' placeholder='00.00' />
-      Available from
-      <input type="date" name="start_date" min='<%= DateTime.now.to_date %>' required>
-      to
-      <input type="date" name="end_date" required>
+      Name: <input class='in-page' type="text" name="space_name" required>
 
+      Description:<input class='in-page' type="text" name="description" required>
+
+      Price per night: £ <input class='in-page' type='number' name="price" min='0.00' step='0.01' placeholder='00.00' />
+
+      Available from <input class='in-page' type="date" name="start_date" min='<%= DateTime.now.to_date %>' required>
+
+      to <input class='in-page' type="date" name="end_date" required>
+
+      Image Url: <input class='in-page' type='url' name='image'>
       <input type="submit" value="list space">
     </form>
   <% else %>

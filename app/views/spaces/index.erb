@@ -1,28 +1,38 @@
-<ul class='listed_spaces' id='listed_spaces'>
-  <h1>Spaces Sphere</h1>
+<h1>Spaces Sphere</h1>
+<% if current_user %>
   <h3> <%=current_user.name%>, where will you escape to?</h3>
-  </br>
-  <div class=listed_spaces>
-    <% @spaces.each do |space| %>
-      <li> Name: <%= space.space_name %>
-        </br>
-        Host: <%= space.user.name + " " +  space.user.surname %>
-        </br>
-        Description: <%= space.description %></br>
-        Price per night: £<%= '%.2f' % space.price %>
-        </br>
-        Space available between: <%= space.start_date %> and <%=space.end_date%>
-        </br>
-      </li>
-      <% if current_user %>
-        <% unless space.user.id == current_user.id %>
-          <form action="/set_space" method="post">
-            <input type='hidden' name='space' value="<%=space.id%>">
-            <input type="submit" value="Request Space">
-          </form>
+<% end %>
+
+<div class="container">  
+  <ul class='listed_spaces' id='listed_spaces'>
+        <% @spaces.each do |space| %>
+            <li class='space_info'> Name: <%= space.space_name %>
+              </br>
+              Host: <%= space.user.name + " " +  space.user.surname %>
+              </br>
+              Description: <%= space.description %></br>
+              Price per night: £<%= '%.2f' % space.price %>
+              </br>
+              Space available between: <%= space.start_date %> and <%=space.end_date%>
+              </br>
+            </li>
+  </ul>
+          <div id='image_space'>
+            <img class='image' src='<%=space.image_url%>'>
+          </div>
+        </div>
+
+
+        <% if current_user %>
+          <% unless space.user.id == current_user.id %>
+            <form action="/set_space" method="post">
+              <input type='hidden' name='space' value="<%=space.id%>">
+              <input type="submit" value="Request Space">
+            </form>
+          <% end %>
         <% end %>
+      </br>
+    </div>
       <% end %>
-    </br>
-    <% end %>
-  </div>
-</ul>
+  </ul>
+</div>
