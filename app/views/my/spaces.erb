@@ -3,13 +3,14 @@
   <ul id='listed_spaces'>
     <% @my_spaces.each do |space| %>
       <li> Name: <%= space.space_name %>
-      </br>
-      Description: <%= space.description %></br>
-      Price per night: £<%= '%.2f' % space.price %></li>
-      </br>
-      Space available between: <%= space.start_date %> and <%=space.end_date%>
-      </br>
-    </br>
+        </br>
+        Description: <%= space.description %></br>
+        Price per night: £<%= '%.2f' % space.price %>
+        </br>
+        Space available between: <%= space.start_date %> and <%=space.end_date%>
+        </br>
+        </br>
+      </li>
     <% end %>
   </ul>
 <% else %>

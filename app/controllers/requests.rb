@@ -25,7 +25,6 @@ class FourM < Sinatra::Base
 
   get '/guest/requests' do
     @requests = Request.all(user_id: current_user.id)
-    # require 'pry'; binding.pry
     erb :'guest/requests/index'
   end
 

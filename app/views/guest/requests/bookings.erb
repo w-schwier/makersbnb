@@ -1,10 +1,11 @@
-<h1> Confirmed booking</h1>
+<h1>Guest <%=current_user.name%>:  Confirmed bookings</h1>
 
-<h3> <%=current_user.name%>'s confirmed booking</h3>
 <% @bookings.each do |booking| %>
-  <li> Host: <%= booking.space.user.name %>
-   Price per night: <%= booking.space.price %></li>
-   </br>
-   Requested date: <%= booking.date %>
-   </br>
+  <li>
+    Host: <%= booking.space.user.name %>
+    Price per night: £<%= booking.space.price %>
+    </br>
+    Requested date: <%= booking.date %>
+    </br>
+  </li>
 <% end %>

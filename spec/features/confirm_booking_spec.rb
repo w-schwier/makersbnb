@@ -10,16 +10,6 @@ feature "Confirm booking" do
     sign_in
   end
 
-scenario "test" do
-  visit '/host/requests'
-  expect(page).to have_content('Host: Mario')
-  expect(page).to have_content('2017-05-25')
-end
-  # let! :request do
-  #   Request.create(id: 1,
-  #                  requested_date: 2001-05-25)
-  # end
-
   scenario "host can see request" do
     visit '/host/requests'
     expect(page).to have_content('2017-05-25')
@@ -29,7 +19,7 @@ end
     visit '/host/requests'
     click_button "Confirm"
     expect(current_path).to eq '/host/requests/bookings'
-    expect(page).to have_content 'confirmed'
+    expect(page).to have_content 'Confirmed'
     expect(page).to have_content '2017-05-25'
   end
 
