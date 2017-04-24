@@ -21,7 +21,7 @@ class FourM < Sinatra::Base
   end
 
   get('/my/spaces') do
-    @my_spaces = Space.all(id: current_user.id)
+    @my_spaces = Space.all(user_id: current_user.id)
     erb :'my/spaces'
   end
 end

@@ -98,6 +98,14 @@ ul.listed_spaces li:nth-child(2){
   margin-left: : 10px;
 }
 
+.navbar-btn {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+
 .dropdown-menu>li>a {
   color: #003366;
 }
